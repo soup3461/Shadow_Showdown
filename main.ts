@@ -12,6 +12,7 @@ function explode () {
     nearby_enemies = spriteutils.getSpritesWithin(SpriteKind.Enemy, 60, bomb)
     for (let value of nearby_enemies) {
         sprites.destroy(value)
+        enemy_count += -1
         update_enemy_counter()
         info.changeScoreBy(100)
     }
